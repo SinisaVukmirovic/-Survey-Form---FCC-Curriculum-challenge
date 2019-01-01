@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Form Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Survey Form for my FCC Curriculum Challenge</p>
+
+    <!-- Form -->
+    <form id="survey-form">
+
+        <!-- Name, email, age -->
+        <div class="row">
+            <div class="left-col">
+                <label id="name-label" for="name">Name:</label>
+            </div>
+            <div class="right-col">
+                <input id="name" type="text" name="name" placeholder="Enter your name..." required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="left-col">
+                <label id="email-label" for="email">Email:</label>
+            </div>
+            <div class="right-col">
+                <input id="email" type="email" name="email" placeholder="Enter your email..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="left-col">
+                <label id="number-label" for="number">Age:</label>
+            </div>
+            <div class="right-col">
+                <input id="number" type="number" name="age" placeholder="Your age..." min="7" max="77" required>
+            </div>
+        </div>
+        <!-- End of name, email, age -->
+
+        <!-- dropdown option -->
+        <div class="row">
+            <div class="left-col">
+                <label for="choosePos">Choose your level of qualification:</label>
+            </div>
+            <div class="right-col">
+                <select name="choosePos" id="dropdown">
+                    <option disabled value>Choose an option</option>
+                    <option value="Student">Student</option>
+                    <option value="Job">Job</option>
+                    <option value="Self taught">Self taught</option>
+                    <option value="College">College</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Radio buttons -->
+        <div class="row">
+            <div class="left-col">
+                <label for="userRating">Would you recommend FCC:</label>
+            </div>
+            <div class="right-col">
+                <ul>
+                    <li class="radio"><input type="radio" name="radio-buttons"  value="1"><label>"Absolutely!"</label></li>
+                    <li class="radio"><input type="radio" name="radio-buttons" value="2"><label>"Yes, of course!"</label></li>
+                    <li class="radio"><input type="radio" name="radio-buttons" value="3"><label>"Sure, why not!"</label></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- checkboxes-->
+        <div class="row">
+            <div class="left-col">
+                <label for="preferences">Your preference:</label>
+            </div>
+            <div class="right-col">
+                <ul>
+                    <li class="checkbox"><input type="checkbox" value="1"><label>HTML5 & CSS3</label></li>
+                    <li class="checkbox"><input type="checkbox" value="2"><label>Javascript</label></li>
+                    <li class="checkbox"><input type="checkbox" value="3"><label>Bootstrap</label></li>
+                    <li class="checkbox"><input type="checkbox" value="4"><label>PHP</label></li>
+                    <li class="checkbox"><input type="checkbox" value="5"><label>React</label></li>
+                    <li class="checkbox"><input type="checkbox" value="6"><label>Vue.js</label></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- text area-->
+        <div class="row">
+            <div class="left-col">
+                <label for="suggestions">Got any suggestions?</label>
+            </div>
+            <div class="right-col">
+                <textarea name="" id="suggestions" cols="30" rows="10" placeholder="Send us Your suggestions..."></textarea>
+            </div>
+        </div>
+
+        <hr>
+
+        <button id="submit" type="submit">Submit</button>
+
+    </form>
+    
+
+</body>
+</html>
